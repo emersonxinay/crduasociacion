@@ -19,14 +19,14 @@
           <td><%= company.name %></td>
           <td><%= company.employees.count  %></td>
           <td><%= link_to 'Show', company, :class => 'btn btn-info' %></td>
-          <td><%= link_to 'Edit', edit_company_path(company) %></td>
-          <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Edit', edit_company_path(company) , :class => 'btn btn-secondary' %></td>
+          <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-primary' %></td>
         </tr>
       <% end %>
     </tbody>
   </table>
 
   <br>
+    <td> <%= link_to 'New Company', new_company_path, :class => 'btn btn-success' %> </td>
 
-  <%= link_to 'New Company', new_company_path %>
 </div>
