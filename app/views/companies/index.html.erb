@@ -1,29 +1,32 @@
-<p id="notice"><%= notice %></p>
+<div class="m-3">
+  <br><br>
+  <p id="notice"><%= notice %></p>
 
-<h1>Companies</h1>
+  <h1>Companies</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Empleados</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @companies.each do |company| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= company.name %></td>
-        <td><%= company.employees.count  %></td>
-        <td><%= link_to 'Show', company, :class => 'btn btn-info' %></td>
-        <td><%= link_to 'Edit', edit_company_path(company) %></td>
-        <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name</th>
+        <th>Empleados</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @companies.each do |company| %>
+        <tr>
+          <td><%= company.name %></td>
+          <td><%= company.employees.count  %></td>
+          <td><%= link_to 'Show', company, :class => 'btn btn-info' %></td>
+          <td><%= link_to 'Edit', edit_company_path(company) %></td>
+          <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Company', new_company_path %>
+  <br>
+
+  <%= link_to 'New Company', new_company_path %>
+</div>
